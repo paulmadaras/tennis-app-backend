@@ -21,4 +21,7 @@ public interface MatchRepository extends JpaRepository<Match, Long> {
 
     /** Delete all matches where a user was the referee */
     void deleteByRefereeId(Long refereeId);
+
+
+    long countByPlayer1_IdOrPlayer2_Id(Long p1, Long p2);
 }
